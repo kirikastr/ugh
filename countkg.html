@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>countkg</title>
+	<link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header df">
+			<img onclick="window.location.href = 'compare.html'" src="./assets/back.svg" class="back" alt="">
+			<div class="search-bar" style="margin-left: 14.5px; width: 280px;">
+				<img src="./assets/poisk.svg" alt="">
+			</div>
+		</header>
+		<main class="main">
+			<div class="kg-box">
+				<div class="b1 df">
+					<div class="img"></div>
+					<div class="nametovara">
+						<p class="pp">Наимование товара</p>
+						<p class="ppp">Производитель</p>
+						<p class="ppp">Дата завоза</p>
+					</div>
+				</div>
+				<div class="b2">
+					<div class="count-box df">
+						<img onclick="minusCount()" src="./assets/minus.svg" class="m" alt="">
+						<div class="gg df"><span style="margin-left: 16px; margin-top: 4px;" id="count">0</span><p style="margin-left: 3px; margin-top: 4px;">кг</p></div>
+						<img onclick="plusCount()" src="./assets/plus.svg" class="m" style="margin-left: 70px;" alt="">
+					</div>
+				</div>
+				<div class="b3">
+					<button class="btn-agree">
+						<p class="ad">Готово</p>
+					</button>
+				</div>
+			</div>
+			<div class="my-list i">
+				<p>Мой список</p>
+				<div class="line"></div>
+				<p>Товаров еще нет</p>
+				<div class="line" style="margin-top: 170px;"></div>
+				<p>Итого(сумма):</p>				
+			</div>			
+		</main>
+		<footer class="footer df">
+			<div class="footer-bar df">
+				<div class="menu"><p class="p1">Купить</p></div>
+				<div class="menu2"><p class="p2">Мои покупки</p></div>
+			</div>
+		</footer>
+	</div>
+
+	<script>
+	    let count = 0;
+
+	    function reloadCount() {
+	      document.getElementById('count').textContent = count;
+	    }
+
+	    function plusCount() {
+	      count++;
+	      reloadCount();
+	    }
+
+	    function minusCount() {
+	      if (count > 0) {
+	        count--;
+	        reloadCount();
+	      }
+	    }		
+	</script>
+
+</body>
+</html>	
